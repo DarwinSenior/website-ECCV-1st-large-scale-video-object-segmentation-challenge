@@ -20,6 +20,8 @@ npm run build --report
 
 # structure of the repository
 
-+ `src/pages/*.vue` are pages for the website
-+ `src/components/*.vue` are for components (like table or paper tab)
-+ `src/assets/*` are for assets
++ `src/pages/*.vue` are for different pages
++ `src/components/*.vue` are for custom html components
++ `static/*` are for static files including images, videos as well as
+    others
+

@@ -7,7 +7,7 @@
     .section
       .columns
         .column(v-for="sample in samples")
-          img(:src="'src/assets/samples/'+sample+'.jpg'")
+          img(:src="'/static/samples/'+sample+'.jpg'")
     .section
       h1.title DataSet
       div DAVIS 2016 In each video sequence a single instance is annotated.
@@ -18,7 +18,7 @@
       h1.title Preview of the Annotations
       .container
         video.is-center(controls)
-          source(src="src/assets/DAVIS-2017-TrainVal.mp4")
+          source(src="/static/DAVIS-2017-TrainVal.mp4")
 </template>
 
 <script lang="ts">
