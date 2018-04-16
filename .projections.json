@@ -1,0 +1,9 @@
+{
+  "src/components/*.vue": { "type": "c" },
+  "src/components/index.ts": { "type": "C" },
+  "src/assets/*.scss": { "type": "s" },
+  "src/pages/*.vue": { "type": "p" },
+  "src/pages/index.ts": { "type": "P" },
+  "src/main.ts": { "type": "M" },
+  "src/app.vue": { "type": "A" }
+}
