@@ -18,7 +18,7 @@
   header#nav.hero.is-primary
     .hero-body: .container
       h1.title Youtube Large Video Segmentation
-      h2.subtitle ECCV-2016 Workshop
+      h2.subtitle ECCV-2018 Workshop
     .hero-foot
       nav.tabs.is-boxed.is-full-width: .container: ul
         li(v-for="item in menu"
@@ -38,10 +38,10 @@ import { Component } from 'vue-property-decorator';
 export default class App extends Vue {
   menu = [
     {text: 'home', to: '/'},
-    {text: 'about', to: '/about'},
+    {text: 'challenge', to: '/challenge'},
+    {text: 'download', to: '/download'},
     {text: 'explore', to: '/explore'},
     {text: 'benchmark', to: '/benchmark'},
-    {text: 'workshop', to: '/workshop'},
   ]
   get route() {
     return this.$route.path;

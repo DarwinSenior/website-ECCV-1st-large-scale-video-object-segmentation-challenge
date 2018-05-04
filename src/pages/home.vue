@@ -1,4 +1,10 @@
 <style lang="scss" scoped>
+#page-home {
+  video {
+    margin: auto;
+    display: block;
+  }
+}
 </style>
 
 <template lang="pug">

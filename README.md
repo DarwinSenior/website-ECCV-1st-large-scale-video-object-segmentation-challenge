@@ -25,3 +25,14 @@ npm run build --report
 + `static/*` are for static files including images, videos as well as
     others
 
+
+# Library reference
+
++ The framework was based on [vuejs][1].
++ Use [bulma][2] and [buefy][3] as reference.
++ Use [pug][4] to simplify html markup.
+
+[1]: https://vuejs.org/
+[2]: https://bulma.io/documentation/
+[3]: https://buefy.github.io/#/
+[4]: https://pugjs.org/language/attributes.html
