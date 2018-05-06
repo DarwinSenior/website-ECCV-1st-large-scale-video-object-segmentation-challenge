@@ -17,8 +17,7 @@
 #app
   header#nav.hero.is-primary
     .hero-body: .container
-      h1.title Youtube Large Video Segmentation
-      h2.subtitle ECCV-2018 Workshop
+      h1.title Youtube Video Object Segmentation
     .hero-foot
       nav.tabs.is-boxed.is-full-width: .container: ul
         li(v-for="item in menu"
