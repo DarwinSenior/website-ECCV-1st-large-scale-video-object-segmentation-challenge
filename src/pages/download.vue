@@ -41,31 +41,31 @@
   section.section
     .container
       h1.title Downloads
-      p The official metrics will be computed using the images and annotations at 480p resolution, but feel free to use the full resolution ones (4k, 1080p, etc.) in any step of your research.
+      p To reduce data preprocessing time, we have prepared all image frames and annotations in 360p resolution. We provide download links for annotated image frames (6fps) as well as raw image frames (30fps).
       .container.download
         span.left Train-Val - Images and Annotations
         a.button.is-warning
           b-icon(icon="zip-box" size="is-small")
-          span 480p
+          span Annotated frames
         a.button.is-warning
           b-icon(icon="zip-box" size="is-small")
-          span full resolution
+          span All frames
       .container.download
         span.left Test-Dev - Images and First Frame Annotations
         a.button.is-warning
           b-icon(icon="zip-box" size="is-small")
-          span 480p
+          span Annotated frames
         a.button.is-warning
           b-icon(icon="zip-box" size="is-small")
-          span full resolution
+          span All frames
       .container.download
         span.left Test-Challenge - Images and First Frame Annotations
         a.button.is-warning
           b-icon(icon="zip-box" size="is-small")
-          span 480p
+          span Annotated frames
         a.button.is-warning
           b-icon(icon="zip-box" size="is-small")
-          span full resolution
+          span All frames
 </template>
 
 <script lang="ts">

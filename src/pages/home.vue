@@ -30,7 +30,9 @@
       h1.title Publication
     .section
       h1.title License
-      p The annotations in this dataset belong to the organizers of the challenge and are licensed under a Creative Commons Attribution 4.0 License.
+      p The annotations in this dataset belong to the organizers of the challenge and are licensed under a 
+        a(href='https://creativecommons.org/licenses/by/4.0/') Creative Commons Attribution 4.0 License
+        |.
 </template>
 
 <script lang="ts">

@@ -50,7 +50,7 @@
       .columns
         .column(v-for="organizer in organizers")
           figure.image.is-128x128
-            img(style="border-radius:50%" :src="'/static/organizers/'+organizer.im_name+'.jpg'")
+            img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
           p.is-size-7-desktop {{organizer.name}} 
           p.is-size-7-desktop {{organizer.affiliation}}
 </template>
