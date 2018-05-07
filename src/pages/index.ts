@@ -9,7 +9,7 @@ import ExplorePage from './explore.vue';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/',
