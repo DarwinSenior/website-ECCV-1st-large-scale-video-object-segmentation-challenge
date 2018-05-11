@@ -19,7 +19,6 @@
       p To facilitate researches in video object segmentation in a large scale base, we will organize a workshop competition named "The 1st Large-scale Video Object Segmentation Challenge" at ECCV 2018. The competition will be based on the Youtube-VOS dataset. For details, please check out 
         a(href='challenge') Challenge page
         |.
-    .section
     
       
     .section
