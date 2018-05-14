@@ -8,8 +8,24 @@
     flex: 1;
     overflow: auto;
   }
+  nav.tabs {
+    overflow: visible;
+  }
   .nav-item {
     transition: all 0.5s linear;
+    &.active {
+      background-color: white;
+      color: #e34c26;
+    }
+  }
+  .dropdown-item {
+    color: #e34c26;
+    transition: all 0.5s linear;
+    &.active {
+      background-color: #e34c26;
+      color: white;
+    }
+    .submenu { width: 100%; }
   }
 }
 </style>
@@ -19,10 +35,25 @@
     .hero-body: .container
       h1.title Youtube Video Object Segmentation
     .hero-foot
-      nav.tabs.is-boxed.is-full-width: .container: ul
-        li(v-for="item in menu"
-        :class="{'is-active': route == item.to}")
-          router-link.nav-item(:to='item.to') {{ item.text }}
+      nav.tabs.is-full-width.is-boxed: .container
+        template(v-for="item in menu")
+          .dropdown.nav-item(slot='trigger'
+            v-if="!item.submenu"
+            :class="{active: route.includes(item.to)}")
+            router-link(:to="'/'+item.to") {{ item.text }}
+          b-dropdown(hoverable v-if="item.submenu")
+            .nav-item(slot='trigger' :class="{active: route.includes(item.to)}")
+              router-link(:to="'/'+item.to")
+                | {{ item.text }}
+                b-icon(icon="menu-down" size="is-small")
+            b-dropdown-item(
+              :disabled="subitem.disabled"
+              v-for="subitem in item.submenu"
+              :class="{active: route.includes(subitem.to)}")
+              router-link.submenu(
+                :to="'/'+item.to+'/'+subitem.to" tag="span")
+                | {{ subitem.text }}
+
   main.section
     router-view
   // footer.footer
@@ -36,11 +67,25 @@ import { Component } from 'vue-property-decorator';
 @Component({ name: 'app' })
 export default class App extends Vue {
   menu = [
-    {text: 'home', to: '/'},
-    {text: 'challenge', to: '/challenge'},
-    {text: 'download', to: '/download'},
-    {text: 'explore', to: '/explore'},
-    {text: 'benchmark', to: '/benchmark'},
+    {text: 'home', to: 'home'},
+    {
+      text: 'challenge', to: 'challenge',
+      submenu: [{
+        text: 'guidelines', to: 'guidelines',
+      }, {
+        text: 'workshop', to: 'workshop',
+      }, {
+        text: 'leader board', to: 'leaderboard',
+        disabled: true,
+      }],
+    }, {
+      text: 'dataset', to: 'dataset',
+      submenu: [{
+        text: 'download', 'to': 'download'
+      }, {
+        text: 'explore', 'to': 'explore'
+      }],
+    }
   ]
   get route() {
     return this.$route.path;
