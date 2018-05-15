@@ -33,7 +33,7 @@
 #app
   header#nav.hero.is-primary
     .hero-body: .container
-      h1.title Youtube Video Object Segmentation
+      h1.title YouTube-VOS: A Large-Scale Benchmark for Video Object Segmentation
     .hero-foot
       nav.tabs.is-full-width.is-boxed: .container
         template(v-for="item in menu")
@@ -67,25 +67,29 @@ import { Component } from 'vue-property-decorator';
 @Component({ name: 'app' })
 export default class App extends Vue {
   menu = [
-    {text: 'home', to: 'home'},
+    {text: 'Home', to: 'home'},
     {
-      text: 'challenge', to: 'challenge',
+      text: 'Dataset', to: 'dataset',
       submenu: [{
-        text: 'guidelines', to: 'guidelines',
+        text: 'Download', 'to': 'download'
       }, {
-        text: 'workshop', to: 'workshop',
+        text: 'Explore', 'to': 'explore'
+      }],
+    },
+    {
+      text: 'Challenge 2018', to: 'challenge',
+      submenu: [{
+        text: 'Home', to: 'home',
+      },{
+        text: 'Guidelines', to: 'guidelines',
       }, {
-        text: 'leader board', to: 'leaderboard',
+        text: 'Leaderboard', to: 'leaderboard',
         disabled: true,
-      }],
-    }, {
-      text: 'dataset', to: 'dataset',
-      submenu: [{
-        text: 'download', 'to': 'download'
-      }, {
-        text: 'explore', 'to': 'explore'
-      }],
-    }
+      },{
+        text: 'Workshop Program', to: 'program',
+        disabled: true,
+      } ],
+    } 
   ]
   get route() {
     return this.$route.path;

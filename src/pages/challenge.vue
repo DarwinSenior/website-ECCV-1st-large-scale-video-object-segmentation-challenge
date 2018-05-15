@@ -5,27 +5,48 @@
 #page-dataset
   section.section#display-section: .container
     .section
-      h1.title The 1st Large-scale Video Object Segmentation Challenge
-    .section
-      h1.title.is-5 News
-    .section
-      h1.title.is-5 Time schedule
-      p Test-Dev: June 2018 - Open end.
+      h1.title The 1st Large-scale Video Object Segmentation Challenge (put in the middel, also link this page to the home of Challenge 2018)
 
-      p Test-Challenge: 18th Aug 2018 23:59 UTC - 3th Sep 2018 23:59 UTC.
     .section
-      h1.title.is-5 Guideline
-      p For detailed guidelines, please check our 
-        a(href='/challenge/guidelines') Guidelines
-        |.
+      h1.title.is-4 Introduction
+      p Video object segmentation has been studied extensively in the past decade due to its importance in understanding video spatial-temporal structures as well as its value in industrial applications. Recently, data-driven algorithms (e.g. deep learning) have become the dominant approach to computer vision problems and one of the most important keys to their successes is the availability of large-scale datasets. Unfortunately, there does not exist a large-scale dataset for video object segmentation. As a result, recent algorithms for video object segmentation have to train their models on image datasets which do not contain any temporal information or video-specific characteristics, and thus would settle for suboptimal solutions. Besides, previous benchmark does not differentiate the object categories used in training and testing, and therefore cannot evaluate the true generalization ability of algorithms on unseen categories.
+
+      p In this workshop in conjunction with a competition, we will present the first large-scale dataset for video object segmentation, which would allow participant teams to try novel and bold ideas that could not succeed with previous small-scale datasets. In contrast to previous video-object-segmentation datasets, our dataset has the following advantages:
+
+      p 1. Our dataset contains 5000 high-resolution videos clips, which are downloaded from YouTube and contain diverse contents. It is more than 30 times larger than the existing largest dataset (i.e. DAVIS) for video object segmentation.
+
+      p 2. Our dataset consists of a total of 76 object categories which cover common objects such as animals, vehicles, accessories and sports.
+
+      p 3. The videos in our dataset are taken by both amateurs and professionals. Therefore, in addition to various object motion, there is frequently significant camera motion.
+
+      p 4. Our segmentation masks are carefully labeled by human annotators to ensure high quality 
+
+      p We expect that our new dataset shall bring new possibilities of generating novel ideas for dense-prediction video tasks as well as providing a more comprehensive evaluation methodologies for video segmentation technology.
     .section
-      h1.title.is-5 Organizers
+      h1.title.is-4 Announcement
+      p The top three teams will be awarded with prizes.
+      p The training dataset will be released soon. 
+      p The test server will be available soon.
+    
+    .section
+      h1.title.is-4 Important Dates
+      p 6/1/2018. Release the training dataset (tentatively)      
+    
+    .section
+      h1.title.is-4 Organizers
       .columns
         .column(v-for="organizer in organizers")
           figure.image.is-128x128
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
           p.is-size-7-desktop {{organizer.name}}
           p.is-size-7-desktop {{organizer.affiliation}}
+
+    .section
+      h1.title.is-4 Sponsors
+      .columns
+        .column(v-for="sponsor in sponsors")
+          figure.image.is-128x128
+            img(:src="'/static/sponsors/'+sponsor.im_name")      
 </template>
 
 <script lang="ts">
@@ -34,9 +55,15 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class ChallengePage extends Vue {
   organizers = [
-    {name:'Ning Xu', affiliation:'Adobe Research', im_name:'Ning_Xu'},
+    {name:'Ning Xu', affiliation:'Adobe Research', im_name:'NingXu'},
     {name:'Linjie Yang', affiliation:'Snap Research', im_name:'LinjieYang'},
     {name:'Yuchen Fan', affiliation:'UIUC', im_name:'YuchenFan'},
+  ]
+  sponsors = [        
+    {name:'Snapchat', im_name:'snapchat.jpg'},        
+    {name:'Adobe',  im_name:'adobe.png'},
+    {name:'UIUC', im_name:'uiuc.jpg'}, 
+    {name:'CAS', im_name:'cas.jpg'}, 
   ]
 }
 </script>
