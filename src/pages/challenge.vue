@@ -33,6 +33,10 @@
       p 6/1/2018. Release the training dataset (tentatively)      
     
     .section
+      h1.title.is-4 Citation
+      p If you are reporting results of the challenge or using the dataset, Please cite:
+
+    .section
       h1.title.is-4 Organizers
       .columns
         .column(v-for="organizer in organizers")
@@ -40,6 +44,12 @@
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
           p.is-size-7-desktop {{organizer.name}}
           p.is-size-7-desktop {{organizer.affiliation}}
+
+    .section
+      h1.title Contact
+      p For Challenge related questions, please contact 
+        a(href='youtube-vos@gmail.com') youtube-vos@gmail.com
+        |.
 
     .section
       h1.title.is-4 Sponsors

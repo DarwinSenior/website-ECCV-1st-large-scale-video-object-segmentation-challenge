@@ -42,7 +42,7 @@
                 .info {{info.unit}}
       p We hope that such a large-scale dataset can  
       p 1. Overcome the data-insufficiency issue for video object segmentation as well as other low and mid-level video understanding tasks, and therefore foster more bold and complicated algorithms such as RNN, Reinforcement Learning etc. 
-      p 2. Provide diverse training samples to help learn effective video object characteristics such as spatial-temporal coherence.
+      p 2. Provide diverse training samples to help learn specific object characteristics in videos such as spatial-temporal coherence.
       p 3. Provide more comprehensive evaluation results than existing datasets (For example, larger testing scale and better evaluation metrics).
             
       //p Video object segmentation, which targets at segmenting a particular object instance throughout the entire video sequence given only the object mask on the first frame, has attracted much attention from the vision community recently. However, we notice that the current datasets for video object segmentation have several limitations, i.e. limited number of videos and no separation between training and evaluation categories. To facilitate future research on this topic, we collected a large scale video segmentation datasets called Youtube-VOS (YouTube Video Object Segmentation). Our dataset contains 3,252 YouTube video clips featuring 78 categories covering common animals, vehicles, accessories and human activities. Each video clip is about 3 to 6 seconds long and often contains multiple objects, which are manually segmented by professional annotators. In addition, our test set contains 10 unique categories that do not exist in the training set and are used to evaluate the generalization ability of existing approaches on unseen categories.
@@ -64,7 +64,7 @@
 
     .section
       h1.title Citation
-      p If you find our dataset is useful for your research, please cite the following papers:
+      p If you find our dataset is useful for your research, please cite:
         
 
     .section

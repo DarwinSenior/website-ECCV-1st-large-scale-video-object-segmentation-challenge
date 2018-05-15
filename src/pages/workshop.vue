@@ -3,13 +3,13 @@
 
 <template lang="pug">
 #page-workshop
-  section.section#display-section: .container
+  section.section#display-section: .container    
     .section
-      h1.title The 1st Large-scale Video Object Segmentation Challenge
+      h1.title Program
     .section
-      h1.title.is-5 Invited Speakers
+      h1.title.is-4 Invited Speakers (Tentatively)
     .section
-      h1.title.is-5 Workshop Program (Sep 14th afternoon)
+      h1.title.is-4 Workshop schedule (Sep 14th afternoon)
       p Will be available soon
 
     

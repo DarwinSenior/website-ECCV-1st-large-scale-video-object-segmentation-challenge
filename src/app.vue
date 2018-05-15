@@ -82,13 +82,12 @@ export default class App extends Vue {
         text: 'Home', to: 'home',
       },{
         text: 'Guidelines', to: 'guidelines',
+      },{
+        text: 'Workshop Program', to: 'workshop',        
       }, {
         text: 'Leaderboard', to: 'leaderboard',
         disabled: true,
-      },{
-        text: 'Workshop Program', to: 'program',
-        disabled: true,
-      } ],
+      }, ],
     } 
   ]
   get route() {
