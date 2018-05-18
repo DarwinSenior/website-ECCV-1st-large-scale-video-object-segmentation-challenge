@@ -10,7 +10,7 @@
       h1.title.is-4 Invited Speakers (Tentatively)
     .section
       h1.title.is-4 Workshop schedule (Sep 14th afternoon)
-      p Will be available soon
+      p To be scheduled.
 
     
 </template>

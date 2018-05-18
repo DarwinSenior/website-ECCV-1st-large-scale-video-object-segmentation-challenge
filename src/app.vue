@@ -71,19 +71,22 @@ export default class App extends Vue {
     {
       text: 'Dataset', to: 'dataset',
       submenu: [{
-        text: 'Download', 'to': 'download'
+        text: 'Download', 'to': 'download',
+        disabled: true,
       }, {
-        text: 'Explore', 'to': 'explore'
+        text: 'Explore', 'to': 'explore',
+        disabled: true,
       }],
     },
     {
       text: 'Challenge 2018', to: 'challenge',
       submenu: [{
-        text: 'Challenge 2018', to: 'challenge2018',
+        text: 'ECCV Workshop', to: 'challenge2018',
       },{
         text: 'Guidelines', to: 'guidelines',
+        disabled: true,
       },{
-        text: 'Workshop Program', to: 'workshop',
+        text: 'Workshop Program', to: 'workshop',        
       }, {
         text: 'Leaderboard', to: 'leaderboard',
         disabled: true,

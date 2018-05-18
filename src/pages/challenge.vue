@@ -10,7 +10,7 @@
 #page-dataset
   section.section#display-section: .container
     .section
-      h1.title.center The 1st Large-scale Video Object Segmentation Challenge (put in the middel, also link this page to the home of Challenge 2018)
+      h1.title.center The 1st Large-scale Video Object Segmentation Challenge
 
     .section
       h1.title.is-4 Introduction
@@ -18,28 +18,29 @@
 
       p In this workshop in conjunction with a competition, we will present the first large-scale dataset for video object segmentation, which would allow participant teams to try novel and bold ideas that could not succeed with previous small-scale datasets. In contrast to previous video-object-segmentation datasets, our dataset has the following advantages:
 
-      p 1. Our dataset contains 5000 high-resolution videos clips, which are downloaded from YouTube and contain diverse contents. It is more than 30 times larger than the existing largest dataset (i.e. DAVIS) for video object segmentation.
+      li Our dataset contains 4000+ high-resolution videos clips, which are downloaded from YouTube and contain diverse contents. It is more than 30 times larger than the existing largest dataset (i.e. DAVIS) for video object segmentation.
 
-      p 2. Our dataset consists of a total of 76 object categories which cover common objects such as animals, vehicles, accessories and sports.
+      li Our dataset consists of a total of 76 object categories which cover common objects such as animals, vehicles, accessories and sports.
 
-      p 3. The videos in our dataset are taken by both amateurs and professionals. Therefore, in addition to various object motion, there is frequently significant camera motion.
+      li The videos in our dataset are taken by both amateurs and professionals. Therefore, in addition to various object motion, there is frequently significant camera motion.
 
-      p 4. Our segmentation masks are carefully labeled by human annotators to ensure high quality
+      li Our segmentation masks are carefully labeled by human annotators to ensure high quality
 
       p We expect that our new dataset shall bring new possibilities of generating novel ideas for dense-prediction video tasks as well as providing a more comprehensive evaluation methodologies for video segmentation technology.
     .section
       h1.title.is-4 Announcement
-      p The top three teams will be awarded with prizes.
-      p The training dataset will be released soon.
-      p The test server will be available soon.
+      li The top three teams will be awarded with prizes.
+      li The training dataset will be released soon.
+      li The test server will be available soon.
 
     .section
-      h1.title.is-4 Important Dates
-      p 6/1/2018. Release the training dataset (tentatively)
+      h1.title.is-4 Tentative Timetable
+      li 6/1/2018. Release the training dataset (tentatively)
 
     .section
       h1.title.is-4 Citation
-      p If you are reporting results of the challenge or using the dataset, Please cite:
+      p Available soon!
+      //p If you are reporting results of the challenge or using the dataset, Please cite:
 
     .section
       h1.title.is-4 Organizers
@@ -51,9 +52,9 @@
           p.is-size-7-desktop {{organizer.affiliation}}
 
     .section
-      h1.title Contact
-      p For Challenge related questions, please contact
-        a(href='youtube-vos@gmail.com') youtube-vos@gmail.com
+      h1.title.is-4 Contact
+      p For Challenge related questions, please feel free to contact
+        a(href='mailto:ytvos@gmail.com')  ytbvos@gmail.com
         |.
 
     .section
