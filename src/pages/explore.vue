@@ -1,5 +1,17 @@
 <style lang="scss" scoped>
 #page-explore {
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  .explore-sidebar {
+    width: 10%;
+    min-width: 200px;
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+  #content {
+    flex: 1;
+  }
   .container.grid {
     display: flex;
     flex-flow: row wrap;
@@ -71,7 +83,12 @@
 
 <template lang="pug">
 #page-explore.explore
-  section.section
+  explore-sidebar(
+    :groups="groups"
+    :group.sync='group'
+    :category.sync='cat'
+  )
+  section.section#content
     .container.grid
       .square(
         v-for="(frames, video) in videos"
@@ -81,14 +98,14 @@
 
   b-modal(:active.sync="showModal")
     .container.modal
-      .card: .card-content
+      .card: .card-content(v-if="videos[cvideo]")
         .square
           img.image(:src="imgurl(cvideo, videos[cvideo][cframe])")
           img.annotation(
             :class="{ hide: !showAnnotation }"
             :src="annotationurl(cvideo, videos[cvideo][cframe])")
         b-pagination(
-          :total="videos[cvideo].length"
+          :total="videos[cvideo].length-1"
           :current.sync="cframe"
           order="is-centered"
           :per-page="1"
@@ -110,20 +127,69 @@ function genframes(x: number) {
 export default class ExplorePage extends Vue {
   showModal = false
   showAnnotation = true
-  videos = {
-    bull: genframes(175),
-    butterfly: genframes(175),
-    camel: genframes(175),
-    chameleon: genframes(175)
-  }
-  cvideo = 'bull'
+  cvideo = ''
   cframe = 1
+  cat = 'Tennis';
+  group = 'Sports';
+
+  get videos() {
+    const {group, cat} = this
+    if (!group || !cat) return {}
+    return this.groups[group][cat]
+  }
 
   imgurl(video: string, frame: number) {
-    return `/static/demos/${video}_images/${frame}.jpg`
+    return `/static/demos/${video}/images/${frame}.jpg`
   }
   annotationurl(video: string, frame: number) {
-    return `/static/demos/${video}_annotations/${frame}.png`
+    return `/static/demos/${video}/annotations/${frame}.png`
+  }
+
+  groups: any = {
+    Sports: {
+      Tennis: [], Bull_riding: [], Parachuting: [],
+      Snowboarding: [], Skateboarding: [], Frisbee: [],
+      Motorcycling: {
+        '-t-NFaw9mv0_4': genframes(145),
+        '-t-NFaw9mv0_5': genframes(145),
+      }, Slopestyle: [], Surfing: []
+    },
+    Mamals: {
+      Deer: [], Tiger: [],
+      Giant_panda: [], Leopard: [],
+      Sheep: [], Camel: [], Ape: [],
+      Fox: {
+        'bfypQW7frfc_1': genframes(145),
+        'bfypQW7frfc_2': genframes(145),
+        'bfypQW7frfc_3': genframes(145),
+        'bfypQW7frfc_5': genframes(145),
+      }, Hedgehog: [],
+      Monkey: {
+        '0pV_HO8Om0U_1': genframes(145),
+        '0pV_HO8Om0U_4': genframes(145),
+      },
+      Rabbit: [], Squirrel: [],
+    },
+    Insects: {
+      Ant: [], Snail: [],
+      Butterfly: {
+        '02Ad3UtMz7Y_1': genframes(175),
+        'aJP-eBK8kY0_1': genframes(175),
+      },
+      Spider: []
+    },
+    Birds: {
+      Owl: [], Eagle: [], Goose: [],
+      Parrot: [], Penguin: [],
+    },
+    Fish: {
+      Goldfish: [], Earless_seal: [], Jellyfish: [],
+      Dolphin: [], Whale: [],
+    },
+    Reptile: {
+      Frog: [],  Reptile: [], Chameleon: [],
+      Snake: [], Lizard: [], Turtle: []
+    }
   }
 }
 </script>
