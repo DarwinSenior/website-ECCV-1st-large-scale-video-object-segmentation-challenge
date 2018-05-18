@@ -7,7 +7,7 @@
   .section.news {
     p {
       font-weight: bold;
-      color: #ff2e58;
+      color: #147ceb;
     }
   }
   .infos {
