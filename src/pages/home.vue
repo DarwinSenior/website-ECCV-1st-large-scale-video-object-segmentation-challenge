@@ -53,15 +53,15 @@
 
       //p Video object segmentation, which targets at segmenting a particular object instance throughout the entire video sequence given only the object mask on the first frame, has attracted much attention from the vision community recently. However, we notice that the current datasets for video object segmentation have several limitations, i.e. limited number of videos and no separation between training and evaluation categories. To facilitate future research on this topic, we collected a large scale video segmentation datasets called Youtube-VOS (YouTube Video Object Segmentation). Our dataset contains 3,252 YouTube video clips featuring 78 categories covering common animals, vehicles, accessories and human activities. Each video clip is about 3 to 6 seconds long and often contains multiple objects, which are manually segmented by professional annotators. In addition, our test set contains 10 unique categories that do not exist in the training set and are used to evaluate the generalization ability of existing approaches on unseen categories.
       //p To facilitate researches in video object segmentation in a large scale base, we will organize a workshop competition named "The 1st Large-scale Video Object Segmentation Challenge" at ECCV 2018. The competition will be based on the Youtube-VOS dataset. For details, please check out
-        a(href='challenge') Challenge page
+        router-link(to='challenge') Challenge page
         |.
 
 
     .section.news
       h1.title News
       p Check out our benchmark challenge
-        a(href='challenge') "1st Large-scale Video Object Segmentation Challenge"
-        | which will be held in ECCV 2018! (use a different color other than black)
+        router-link(to='challenge/challenge2018') "1st Large-scale Video Object Segmentation Challenge"
+        | which will be held in ECCV 2018!
       p Dataset will be released in early June, 2018.
     //.section
     //  h1.title Data Statistics
@@ -81,7 +81,7 @@
           img(:src="'/static/samples/'+sample+'_fish.jpg'")
       p
         span For more examples, please
-        a(href='explore')  explore
+        router-link(to='dataset/explore')  explore
         span  our dataset.
 
 

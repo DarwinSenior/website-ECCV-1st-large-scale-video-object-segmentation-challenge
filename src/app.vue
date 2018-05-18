@@ -27,9 +27,6 @@
     }
     .submenu { width: 100%; }
   }
-  .title {
-    text-align: center;
-  }
 }
 </style>
 <template lang="pug">

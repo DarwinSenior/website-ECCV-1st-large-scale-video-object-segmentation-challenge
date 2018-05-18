@@ -1,11 +1,16 @@
 <style lang="scss" scoped>
+#page-dataset {
+  .center {
+    text-align: center;
+  }
+}
 </style>
 
 <template lang="pug">
 #page-dataset
   section.section#display-section: .container
     .section
-      h1.title The 1st Large-scale Video Object Segmentation Challenge (put in the middel, also link this page to the home of Challenge 2018)
+      h1.title.center The 1st Large-scale Video Object Segmentation Challenge (put in the middel, also link this page to the home of Challenge 2018)
 
     .section
       h1.title.is-4 Introduction
@@ -19,19 +24,19 @@
 
       p 3. The videos in our dataset are taken by both amateurs and professionals. Therefore, in addition to various object motion, there is frequently significant camera motion.
 
-      p 4. Our segmentation masks are carefully labeled by human annotators to ensure high quality 
+      p 4. Our segmentation masks are carefully labeled by human annotators to ensure high quality
 
       p We expect that our new dataset shall bring new possibilities of generating novel ideas for dense-prediction video tasks as well as providing a more comprehensive evaluation methodologies for video segmentation technology.
     .section
       h1.title.is-4 Announcement
       p The top three teams will be awarded with prizes.
-      p The training dataset will be released soon. 
+      p The training dataset will be released soon.
       p The test server will be available soon.
-    
+
     .section
       h1.title.is-4 Important Dates
-      p 6/1/2018. Release the training dataset (tentatively)      
-    
+      p 6/1/2018. Release the training dataset (tentatively)
+
     .section
       h1.title.is-4 Citation
       p If you are reporting results of the challenge or using the dataset, Please cite:
@@ -47,7 +52,7 @@
 
     .section
       h1.title Contact
-      p For Challenge related questions, please contact 
+      p For Challenge related questions, please contact
         a(href='youtube-vos@gmail.com') youtube-vos@gmail.com
         |.
 
@@ -56,7 +61,7 @@
       .columns
         .column(v-for="sponsor in sponsors")
           figure.image.is-128x128
-            img(:src="'/static/sponsors/'+sponsor.im_name")      
+            img(:src="'/static/sponsors/'+sponsor.im_name")
 </template>
 
 <script lang="ts">
@@ -69,11 +74,11 @@ export default class ChallengePage extends Vue {
     {name:'Linjie Yang', affiliation:'Snap Research', im_name:'LinjieYang'},
     {name:'Yuchen Fan', affiliation:'UIUC', im_name:'YuchenFan'},
   ]
-  sponsors = [        
-    {name:'Snapchat', im_name:'snapchat.jpg'},        
+  sponsors = [
+    {name:'Snapchat', im_name:'snapchat.jpg'},
     {name:'Adobe',  im_name:'adobe.png'},
-    {name:'UIUC', im_name:'uiuc.jpg'}, 
-    {name:'CAS', im_name:'cas.jpg'}, 
+    {name:'UIUC', im_name:'uiuc.jpg'},
+    {name:'CAS', im_name:'cas.jpg'},
   ]
 }
 </script>
