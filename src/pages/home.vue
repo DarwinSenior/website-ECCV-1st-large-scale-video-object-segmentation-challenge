@@ -5,10 +5,14 @@
     display: block;
   }
   .section.news {
-    p {
+    li,p {
       font-weight: bold;
       color: #147ceb;
     }
+  }
+  .example {
+    width: 80%;
+    margin: auto;
   }
   .infos {
     background-color: #e44c27;
@@ -76,7 +80,7 @@
 
     .section
       h1.title.is-4 Dataset Examples
-      .columns
+      .columns.example
         .column(v-for="sample in samples")
           img(:src="'/static/samples/'+sample+'_bike.jpg'")
           img(:src="'/static/samples/'+sample+'_fish.jpg'")
@@ -92,7 +96,9 @@
         .column(v-for="organizer in organizers")
           figure.image.is-128x128
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
-          p.is-size-7-desktop {{organizer.name}}
+          p
+          p.is-size-7-desktop
+            a(:href="organizer.link") {{organizer.name}}
           p.is-size-7-desktop {{organizer.affiliation}}
 
     .section
@@ -138,13 +144,36 @@ export default class HomePage extends Vue {
   }
 
   organizers = [
-    {name:'Ning Xu', affiliation:'Adobe Research', im_name:'NingXu'},
-    {name:'Linjie Yang', affiliation:'Snap Research', im_name:'LinjieYang'},
-    {name:'Jianchao Yang', affiliation:'Toutiao', im_name:'Jianchao'},
-    {name:'Dingcheng Yue', affiliation:'UIUC', im_name:'Dingcheng'},
-    {name:'Yuchen Fan', affiliation:'UIUC', im_name:'Fan'},
-    {name:'Yuchen Liang', affiliation:'UIUC', im_name:'Liang'},
-    {name:'Thomas Huang', affiliation:'UIUC', im_name:'Tom'},
+    {
+      name:'Ning Xu',
+      affiliation:'Adobe Research',
+      im_name:'NingXu',
+      link: 'https://sites.google.com/view/ningxu/homepage'
+    }, {
+      name:'Linjie Yang',
+      affiliation:'Snap Research',
+      im_name:'LinjieYang'
+    }, {
+      name:'Jianchao Yang',
+      affiliation:'Toutiao',
+      im_name:'JianchaoYang'
+    }, {
+      name:'Dingcheng Yue',
+      affiliation:'UIUC',
+      im_name:'DingchengYue'
+    }, {
+      name:'Yuchen Fan',
+      affiliation:'UIUC',
+      im_name:'YuchenFan'
+    }, {
+      name:'Yuchen Liang',
+      affiliation:'UIUC',
+      im_name:'YuchenLiang'
+    }, {
+      name:'Thomas Huang',
+      affiliation:'UIUC',
+      im_name:'Tom'
+    },
   ]
 
   sponsors = [

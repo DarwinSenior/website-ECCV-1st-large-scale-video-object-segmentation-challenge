@@ -71,9 +71,19 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class ChallengePage extends Vue {
   organizers = [
-    {name:'Ning Xu', affiliation:'Adobe Research', im_name:'NingXu'},
-    {name:'Linjie Yang', affiliation:'Snap Research', im_name:'LinjieYang'},
-    {name:'Yuchen Fan', affiliation:'UIUC', im_name:'YuchenFan'},
+    {
+      name:'Ning Xu',
+      affiliation:'Adobe Research',
+      im_name:'NingXu'
+    }, {
+      name:'Linjie Yang',
+      affiliation:'Snap Research',
+      im_name:'LinjieYang'
+    }, {
+      name:'Yuchen Fan',
+      affiliation:'UIUC',
+      im_name:'YuchenFan'
+    },
   ]
   sponsors = [
     {name:'Snapchat', im_name:'snapchat.jpg'},

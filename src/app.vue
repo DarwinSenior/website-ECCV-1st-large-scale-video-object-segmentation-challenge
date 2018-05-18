@@ -4,6 +4,9 @@
   width: 100vw;
   display: flex;
   flex-flow: column;
+  p, li {
+    padding-bottom: 15px;
+  }
   main {
     flex: 1;
     overflow: auto;
@@ -51,8 +54,10 @@
               v-for="subitem in item.submenu"
               :class="{active: route.includes(subitem.to)}")
               router-link.submenu(
+                v-if="!subitem.disabled"
                 :to="'/'+item.to+'/'+subitem.to" tag="span")
                 | {{ subitem.text }}
+              span.submenu(v-if="subitem.disabled") {{subitem.text}}
 
   main.section
     router-view
@@ -86,7 +91,7 @@ export default class App extends Vue {
         text: 'Guidelines', to: 'guidelines',
         disabled: true,
       },{
-        text: 'Workshop Program', to: 'workshop',        
+        text: 'Workshop Program', to: 'workshop',
       }, {
         text: 'Leaderboard', to: 'leaderboard',
         disabled: true,
