@@ -97,7 +97,7 @@
     .section
       h1.title Contact
       p For dataset related questions, please contact
-        a(href='youtube-vos@gmail.com')  youtube-vos@gmail.com
+        a(href='mailto:ytvos@gmail.com')  ytbvos@gmail.com
         |.
 
     .section
@@ -149,7 +149,7 @@ export default class HomePage extends Vue {
   sponsors = [
     {name:'Snapchat', im_name:'snapchat.jpg'},
     {name:'Adobe',  im_name:'adobe.png'},
-    {name:'UIUC', im_name:'uiuc.jpg'},
+    {name:'UIUC', im_name:'uiuc-alt.jpg'},
     {name:'CAS', im_name:'cas.jpg'},
   ]
 
