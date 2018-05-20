@@ -42,13 +42,14 @@
 
       p YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. Some statistics of the dataset are shown below. More details can be found in the dataset report.
 
-    .section
-      .columns
-        .column(v-for="info in infos")
-            .infos
-              b-tooltip(:label="expandinfo(info)" type="is-light")
-                .num  {{info.number}}
-                .info {{info.unit}}
+    // .section
+    //   .columns
+    //     .column(v-for="info in infos")
+    //         .infos
+    //           b-tooltip(:label="expandinfo(info)" type="is-light")
+    //             .num  {{info.number}}
+    //             .info {{info.unit}}
+
     .section
       p We hope that such a large-scale dataset can
       li Overcome the data-insufficiency issue for video object segmentation as well as other low and mid-level video understanding tasks, and therefore foster more bold and complicated algorithms such as RNN, Reinforcement Learning etc.
@@ -72,10 +73,10 @@
     //  p put a historgram of number of different categories, a histogram of video length
 
 
-    .section
-      h1.title.is-4 Citation
-      p Available soon!
-      //p If you find our dataset is useful for your research, please cite:
+    //.section
+    //  h1.title.is-4 Citation
+    //  p Available soon!
+    //  //p If you find our dataset is useful for your research, please cite:
 
 
     .section
