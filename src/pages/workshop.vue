@@ -3,8 +3,6 @@
   .speakers {
     .message-body {
       border-width: 0 0 0 4px;
-      display: flex;
-      flex-flow: row;
       .left {
         margin-right: 20px;
       }
@@ -21,13 +19,13 @@
     .section
       h1.title.is-4 Invited Speakers (Tentatively)
       article.message.is-dark.speakers(v-for="speaker in speakers")
-        .message-body
-          .left
+        .message-body.columns
+          .left.column.is-narrow
             figure.image.is-128x128
               img(:src="'static/speakers/'+speaker.photo+'.jpg'")
-          .right
-            p.name {{speaker.name}}
-            p.bio {{speaker.bio}}
+          .right.column
+            p.is-size-5.has-text-weight-bold {{speaker.name}}
+            p {{speaker.bio}}
     .section
       h1.title.is-4 Workshop schedule (Sep 14th afternoon)
       p To be scheduled.
