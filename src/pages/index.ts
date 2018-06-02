@@ -7,11 +7,13 @@ import DownloadPage from './download.vue'
 import ExplorePage from './explore.vue'
 import WorkshopPage from './workshop.vue'
 import GuidelinesPage from './guidelines.vue'
+import DummyPage from './dummy.vue'
+import NotFoundPage from './notfound.vue'
 
 Vue.use(Router);
 
 export default new Router({
-  mode: 'hash',
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -23,11 +25,13 @@ export default new Router({
     }, {
       path: '/dataset/download',
       name: 'download',
-      component: DownloadPage,
+      // component: DownloadPage,
+      component: DummyPage,
     }, {
       path: '/dataset/explore',
       name: 'explore',
-      component: ExplorePage,
+      component: DummyPage,
+      // component: ExplorePage,
     }, {
       path: '/challenge/challenge2018',
       name: 'challenge',
@@ -40,7 +44,17 @@ export default new Router({
       path: '/challenge/guidelines',
       name: 'guidelines',
       component: GuidelinesPage,
-    }
+    }, {
+      path: '/challenge/leaderboard',
+      name: 'leaderboard',
+      component: DummyPage,
+    }, {
+      path: '/404',
+      component: NotFoundPage,
+    }, {
+      path: '*',
+      redirect: '/404'
+    },
   ],
 });
 

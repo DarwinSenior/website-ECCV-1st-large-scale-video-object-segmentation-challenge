@@ -11,6 +11,8 @@
   section.section#display-section: .container
     .section
       h1.title.center The 1st Large-scale Video Object Segmentation Challenge
+      h2.subtitle.center.has-text-grey-light
+        | Workshop in conjunction with ECCV2018, Munich, Germany
 
     .section
       h1.title.is-4 Introduction
@@ -48,7 +50,9 @@
         .column(v-for="organizer in organizers")
           figure.image.is-128x128
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
-          p.is-size-7-desktop {{organizer.name}}
+          p
+          p.is-size-7-desktop
+            a(:href='organizer.link') {{organizer.name}}
           p.is-size-7-desktop {{organizer.affiliation}}
 
     .section

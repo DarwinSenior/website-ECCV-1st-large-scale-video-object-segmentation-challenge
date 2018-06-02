@@ -5,6 +5,9 @@
       border-width: 0 0 0 4px;
       .left {
         margin-right: 20px;
+        figure.image {
+          width: 128px;
+        }
       }
     }
   }
@@ -16,13 +19,14 @@
   section.section#display-section: .container
     .section
       h1.title Program
+      h2.subtitle.has-text-grey-light ECCV2018, Munich, Germany
     .section
       h1.title.is-4 Invited Speakers (Tentatively)
       article.message.is-dark.speakers(v-for="speaker in speakers")
         .message-body.columns
           .left.column.is-narrow
-            figure.image.is-128x128
-              img(:src="'static/speakers/'+speaker.photo+'.jpg'")
+            figure.image
+              img(:src="'/static/speakers/'+speaker.photo+'.jpg'")
           .right.column
             p.is-size-5.has-text-weight-bold {{speaker.name}}
             p {{speaker.bio}}
