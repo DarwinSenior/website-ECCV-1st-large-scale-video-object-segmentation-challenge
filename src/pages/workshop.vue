@@ -47,6 +47,7 @@ export default class WorkshopPage extends Vue {
     {name:'Ning Xu', affiliation:'Adobe Research', im_name:'Ning_Xu'},
     {name:'Linjie Yang', affiliation:'Snap Research', im_name:'LinjieYang'},
     {name:'Yuchen Fan', affiliation:'UIUC', im_name:'YuchenFan'},
+    {name: 'Weiyao Lin', affiliation: 'SJTU', im_name: 'WeiyaoLin'},
   ]
 
   speakers = [{

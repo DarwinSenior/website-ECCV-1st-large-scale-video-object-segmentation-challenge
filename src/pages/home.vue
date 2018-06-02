@@ -82,7 +82,7 @@
     .section
       h1.title.is-4 Dataset Examples
       .columns.example
-        .column(v-for="sample in samples")
+        div(v-for="sample in samples")
           img(:src="'/static/samples/'+sample+'_bike.jpg'")
           img(:src="'/static/samples/'+sample+'_fish.jpg'")
       p
@@ -93,14 +93,15 @@
 
     .section
       h1.title.is-4 People
-      .columns
-        .column(v-for="organizer in organizers")
+      .columns.flex-wrap
+        div(v-for="organizer in organizers")
           figure.image.is-128x128
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
           p
-          p.is-size-7-desktop
+          p.is-size-7-desktop.has-text-centered
             a(:href="organizer.link") {{organizer.name}}
-          p.is-size-7-desktop {{organizer.affiliation}}
+          p.is-size-7-desktop.has-text-centered
+            | {{organizer.affiliation}}
 
     .section
       h1.title.is-4 Contact

@@ -1,8 +1,5 @@
 <style lang="scss" scoped>
 #page-dataset {
-  .center {
-    text-align: center;
-  }
 }
 </style>
 
@@ -10,8 +7,9 @@
 #page-dataset
   section.section#display-section: .container
     .section
-      h1.title.center The 1st Large-scale Video Object Segmentation Challenge
-      h2.subtitle.center.has-text-grey-light
+      h1.title.has-text-centered
+        | The 1st Large-scale Video Object Segmentation Challenge
+      h2.subtitle.has-text-centered.has-text-grey-light
         | Workshop in conjunction with ECCV2018, Munich, Germany
 
     .section
@@ -46,14 +44,15 @@
 
     .section
       h1.title.is-4 Organizers
-      .columns
-        .column(v-for="organizer in organizers")
+      .columns.flex-wrap
+        div(v-for="organizer in organizers")
           figure.image.is-128x128
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
           p
-          p.is-size-7-desktop
+          p.is-size-7-desktop.has-text-centered
             a(:href='organizer.link') {{organizer.name}}
-          p.is-size-7-desktop {{organizer.affiliation}}
+          p.is-size-7-desktop.has-text-centered
+            | {{organizer.affiliation}}
 
     .section
       h1.title.is-4 Contact
@@ -63,8 +62,8 @@
 
     .section
       h1.title.is-4 Sponsors
-      .columns
-        .column(v-for="sponsor in sponsors")
+      .columns.flex-wrap
+        div(v-for="sponsor in sponsors")
           figure.image.is-128x128
             img(:src="'/static/sponsors/'+sponsor.im_name")
 </template>
@@ -80,6 +79,10 @@ export default class ChallengePage extends Vue {
       affiliation:'Adobe Research',
       im_name:'NingXu'
     }, {
+      name: 'Brian Price',
+      affiliation: 'Adobe Research',
+      im_name:'BrianPrice'
+    }, {
       name:'Linjie Yang',
       affiliation:'Snap Research',
       im_name:'LinjieYang'
@@ -87,6 +90,25 @@ export default class ChallengePage extends Vue {
       name:'Yuchen Fan',
       affiliation:'UIUC',
       im_name:'YuchenFan'
+    }, {
+      name: 'Thomas Huang',
+      affiliation: 'UIUC',
+      im_name: 'Tom',
+      link: 'https://ece.illinois.edu/directory/profile/t-huang1'
+    }, {
+      name: 'Jianchao Yang',
+      affiliation: 'Toutiao',
+      im_name: 'JianchaoYang',
+      link: 'http://www.ifp.illinois.edu/~jyang29/',
+    }, {
+      name: 'Jiebo Luo',
+      affiliation: 'Rochester',
+      im_name: 'JieboLuo',
+      link: 'http://www.cs.rochester.edu/u/jluo/',
+    }, {
+      name: 'Weiyao Lin',
+      affiliation: 'SJTU',
+      im_name: 'WeiyaoLin'
     },
   ]
   sponsors = [
