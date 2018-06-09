@@ -27,6 +27,11 @@
       li Our segmentation masks are carefully labeled by human annotators to ensure high quality
 
       p We expect that our new dataset shall bring new possibilities of generating novel ideas for dense-prediction video tasks as well as providing a more comprehensive evaluation methodologies for video segmentation technology.
+
+      p Our workshop is co-located with another video segmentation workshop
+        a(href="http://eecs.oregonstate.edu/IWVS_workshop/")  "The Third International Workshop on Video Segmentation"
+        | . The other workshop will discuss on a wide range of topics in video segmentation. Welcome to attend their workshop as  well in the morning session.
+
     .section
       h1.title.is-4 Announcement
       li The top three teams will be awarded with prizes.
@@ -35,11 +40,15 @@
 
     .section
       h1.title.is-4 Tentative Timetable
-      li 6/1/2018. Release the training dataset (tentatively)
+      li <strong>Sep 14th</strong>: The workshop begins.
+      li <strong>Aug 27th</strong>: The final competition results will be announced and high-performance teams will be invited.
+      li <strong>Aug 10th-25th</strong>: Release the test dataset and open the submission of the test results.
+      li <strong>Jul 1st</strong>: Setup the submission server on CodaLab and open the submission of the validation results.
+      li <strong>Jun 15th</strong>: Release the training and validation dataset.
 
-    .section
-      h1.title.is-4 Citation
-      p Available soon!
+    // .section
+    //   h1.title.is-4 Citation
+    //   p Available soon!
       //p If you are reporting results of the challenge or using the dataset, Please cite:
 
     .section
@@ -77,38 +86,48 @@ export default class ChallengePage extends Vue {
     {
       name:'Ning Xu',
       affiliation:'Adobe Research',
-      im_name:'NingXu'
-    }, {
-      name: 'Brian Price',
-      affiliation: 'Adobe Research',
-      im_name:'BrianPrice'
+      im_name:'NingXu',
+      link: 'http://sites.google.com/view/ningxu/',
     }, {
       name:'Linjie Yang',
       affiliation:'Snap Research',
-      im_name:'LinjieYang'
+      im_name:'LinjieYang',
+      link: 'https://sites.google.com/site/linjieyang89/',
     }, {
       name:'Yuchen Fan',
       affiliation:'UIUC',
-      im_name:'YuchenFan'
+      im_name:'YuchenFan',
+      link: 'https://ece.illinois.edu/directory/profile/yuchenf4',
+    }, {
+      name: 'Brian Price',
+      affiliation: 'Adobe Research',
+      im_name:'BrianPrice',
+      link: 'https://www.brianpricephd.com/',
+    }, {
+      name: 'Weiyao Lin',
+      affiliation: 'SJTU',
+      im_name: 'WeiyaoLin',
+      link: 'https://weiyaolin.github.io/',
+    }, {
+      name: 'Michael Ying Yang',
+      affiliation: 'U of Twente',
+      im_name: 'MichaelYingYang',
+      link: 'https://sites.google.com/site/michaelyingyang/',
+    }, {
+      name: 'Jianchao Yang',
+      affiliation: 'Toutiao AI Lab',
+      im_name: 'JianchaoYang',
+      link: 'http://www.ifp.illinois.edu/~jyang29/',
+    }, {
+      name: 'Jiebo Luo',
+      affiliation: 'U of Rochester',
+      im_name: 'JieboLuo',
+      link: 'http://www.cs.rochester.edu/u/jluo/',
     }, {
       name: 'Thomas Huang',
       affiliation: 'UIUC',
       im_name: 'Tom',
       link: 'https://ece.illinois.edu/directory/profile/t-huang1'
-    }, {
-      name: 'Jianchao Yang',
-      affiliation: 'Toutiao',
-      im_name: 'JianchaoYang',
-      link: 'http://www.ifp.illinois.edu/~jyang29/',
-    }, {
-      name: 'Jiebo Luo',
-      affiliation: 'Rochester',
-      im_name: 'JieboLuo',
-      link: 'http://www.cs.rochester.edu/u/jluo/',
-    }, {
-      name: 'Weiyao Lin',
-      affiliation: 'SJTU',
-      im_name: 'WeiyaoLin'
     },
   ]
   sponsors = [

@@ -33,7 +33,9 @@
     .section
       h1.title.is-4 Workshop schedule (Sep 14th afternoon)
       p To be scheduled.
-
+    // .section
+    //   hi.title.is-4 Citation
+    //   p Will be available soon.
 
 </template>
 

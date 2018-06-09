@@ -2,23 +2,34 @@
 #app {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  flex-flow: column;
+  overflow: auto;
+  /* display: flex; */
+  /* flex-flow: column; */
   p, li {
     padding-bottom: 15px;
   }
-  main {
-    flex: 1;
-    overflow: auto;
-  }
   nav.tabs {
     overflow: visible;
+    position: sticky;
+    z-index: 20;
+    top: -1px;
+    background-color: #e34c26;
   }
   .nav-item {
     transition: all 0.5s linear;
+    a {
+      color: white;
+      transition: background-color ease 0.5s;
+    }
+    a:hover {
+      background-color: #f94118;
+    }
     &.active {
       background-color: white;
       color: #e34c26;
+      a {
+        color: black;
+      }
     }
   }
   .dropdown-item {
@@ -34,33 +45,30 @@
 </style>
 <template lang="pug">
 #app
-  header#nav.hero.is-primary
-    .hero-body: .container
-      h1.title YouTube-VOS: A Large-Scale Benchmark for Video Object Segmentation
-    .hero-foot
-      nav.tabs.is-full-width.is-boxed: .container
-        template(v-for="item in menu")
-          .dropdown.nav-item(slot='trigger'
-            v-if="!item.submenu"
-            :class="{active: route.includes(item.to)}")
-            router-link(:to="'/'+item.to") {{ item.text }}
-          b-dropdown(hoverable v-if="item.submenu")
-            .nav-item(slot='trigger' :class="{active: route.includes(item.to)}")
-                a
-                  | {{ item.text }}
-                  b-icon(icon="menu-down" size="is-small")
-            b-dropdown-item(
-              :disabled="subitem.disabled"
-              v-for="subitem in item.submenu"
-              :class="{active: route.includes(subitem.to)}")
-              router-link.submenu(
-                v-if="!subitem.disabled"
-                :to="'/'+item.to+'/'+subitem.to" tag="span")
-                | {{ subitem.text }}
-              span.submenu(v-if="subitem.disabled") {{subitem.text}}
+  header.hero.is-primary: .hero-body: .container
+    h1.title YouTube-VOS: A Large-Scale Benchmark for Video Object Segmentation
+  nav.tabs.is-full-width.is-boxed: .container.is-primary
+    template(v-for="item in menu")
+      .dropdown.nav-item(slot='trigger'
+        v-if="!item.submenu"
+        :class="{active: route.includes(item.to)}")
+        router-link(:to="'/'+item.to") {{ item.text }}
+      b-dropdown(hoverable v-if="item.submenu")
+        .nav-item(slot='trigger' :class="{active: route.includes(item.to)}")
+            a
+              | {{ item.text }}
+              b-icon(icon="menu-down" size="is-small")
+        b-dropdown-item(
+          :disabled="subitem.disabled"
+          v-for="subitem in item.submenu"
+          :class="{active: route.includes(subitem.to)}")
+          router-link.submenu(
+            v-if="!subitem.disabled"
+            :to="'/'+item.to+'/'+subitem.to" tag="span")
+            | {{ subitem.text }}
+          span.submenu(v-if="subitem.disabled") {{subitem.text}}
 
-  main.section
-    router-view
+  router-view
   // footer.footer
   //   .container
 </template>

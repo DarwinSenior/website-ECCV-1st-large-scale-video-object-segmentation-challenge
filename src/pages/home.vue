@@ -40,7 +40,7 @@
     .section
       h1.title.is-4 YouTube-VOS
 
-      p YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. Some statistics of the dataset are shown below. More details can be found in the dataset report.
+      p YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. Some statistics of the dataset are shown below. More details can be found in the dataset report (will be available soon).
 
     // .section
     //   .columns
@@ -64,10 +64,11 @@
 
     .section.news
       h1.title.is-4 News
+      // li Dataset will be released in early June, 2018.
+      li We are carefully performing the final check of our dataset and will release it in mid June of 2018.
       li Check out our benchmark challenge
-        router-link(to='challenge/challenge2018') "1st Large-scale Video Object Segmentation Challenge"
-        | which will be held in ECCV 2018!
-      li Dataset will be released in early June, 2018.
+        router-link(to='challenge/challenge2018')  "1st Large-scale Video Object Segmentation Challenge"
+        |  which will be held in ECCV 2018!
     //.section
     //  h1.title Data Statistics
     //  p put a historgram of number of different categories, a histogram of video length
@@ -102,6 +103,10 @@
             a(:href="organizer.link") {{organizer.name}}
           p.is-size-7-desktop.has-text-centered
             | {{organizer.affiliation}}
+
+    .section
+      hi.title.is-4 Citation
+      p will be available soon
 
     .section
       h1.title.is-4 Contact
@@ -157,7 +162,7 @@ export default class HomePage extends Vue {
       im_name:'LinjieYang'
     }, {
       name:'Jianchao Yang',
-      affiliation:'Toutiao',
+      affiliation:'Toutiao AI Lab',
       im_name:'JianchaoYang'
     }, {
       name:'Dingcheng Yue',

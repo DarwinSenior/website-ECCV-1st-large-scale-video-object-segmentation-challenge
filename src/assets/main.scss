@@ -22,20 +22,20 @@ figure.image.is-128x128 {
 }
 
 * {
-  &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    border-radius: 8px;
-  }
+  // &::-webkit-scrollbar {
+  //   width: 8px;
+  //   height: 8px;
+  //   border-radius: 8px;
+  // }
 
-  &::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: lightgray;
-  }
+  // &::-webkit-scrollbar-thumb {
+  //   border-radius: 8px;
+  //   background-color: lightgray;
+  // }
 
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
+  // &::-webkit-scrollbar-button {
+  //   display: none;
+  // }
 
 }
 
