@@ -13,10 +13,10 @@
     .section
       h1.title.is-4 Dataset
       p Our dataset contains three subsets.
-      li Train: 3471 video sequences with densely-sampled multi-object annotations. Each object is annotated with a category name, there is 65 categories in traning set.
-      li Test-Dev: 474 video sequences with the first-frame annotations. It includes objects from the 65 training categories, and 26 unseen categories in training.  
-      li Test-Challenge: Another 508 sequences with the first-frame annotations. It includes objects from the 65 training categories, and 29 unseen categories in training.
-      li RGB images and annotations for the labeled frames will be provided. We will also provide a download link for all image frames. Category information for Test-Dev and Test-Challenge will not be released.
+      li Training: 3471 video sequences with densely-sampled multi-object annotations. Each object is annotated with a category name, there is 65 categories in traning set.
+      li Validation: 474 video sequences with the first-frame annotations. It includes objects from the 65 training categories, and 26 unseen categories in training.  
+      li Test: Another 508 sequences with the first-frame annotations. It includes objects from the 65 training categories, and 29 unseen categories in training.
+      li RGB images and annotations for the labeled frames will be provided. We will also provide a download link for all image frames. Evaluation of validation and test sets will be done by uploading results to our evaluation server. Category information for validation and test sets will not be released.
       li To download the dataset, checkout 
         a(href='/dataset/download') download 
         | page.

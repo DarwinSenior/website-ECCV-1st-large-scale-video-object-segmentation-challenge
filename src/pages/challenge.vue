@@ -20,7 +20,7 @@
 
       li Our dataset contains 4000+ high-resolution videos clips, which are downloaded from YouTube and contain diverse contents. It is more than 30 times larger than the existing largest dataset (i.e. DAVIS) for video object segmentation.
 
-      li Our dataset consists of a total of 76 object categories which cover common objects such as animals, vehicles, accessories and sports.
+      li Our dataset consists of a total of 94 object categories which cover common objects such as animals, vehicles, accessories and persons in different activities.
 
       li The videos in our dataset are taken by both amateurs and professionals. Therefore, in addition to various object motion, there is frequently significant camera motion.
 

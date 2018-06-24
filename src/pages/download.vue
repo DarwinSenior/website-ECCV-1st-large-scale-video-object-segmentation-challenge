@@ -32,11 +32,11 @@
             b-icon(icon="github-circle" size="is-small")
             span Python code
       .section
-        h1.title Evaluation Test-Dev and Test-Challenge
+        h1.title Evaluation on Validation and Test
         .container.download
           a.button.is-info(disabled)
             b-icon(icon="cube-outline" size="is-small")
-            span Test Dev and Test Challenge
+            span Validation and Test
 
       .section
         h1.title Downloads
@@ -66,7 +66,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class DownloadPage extends Vue {
   downloads = [{
-    text: 'Train-Val Images and Annotations',
+    text: 'Train Images and Annotations',
     annotated_frames: [{
       link: 'https://drive.google.com/drive/folders/1bI5J1H3mxsIGo7Kp-pPZU8i6rnykOw7f?usp=sharing',
       text: 'Google Drive',
@@ -81,9 +81,9 @@ export default class DownloadPage extends Vue {
       icon: 'onedrive',
     }]
   }, {
-    text: 'Test-Dev - Images and First Frame Annotations',
+    text: 'Validation - Images and First Frame Annotations',
   }, {
-    text: 'Test-Challenge - Images and First Frame Annotations'
+    text: 'Test - Images and First Frame Annotations'
   }]
 }
 </script>
