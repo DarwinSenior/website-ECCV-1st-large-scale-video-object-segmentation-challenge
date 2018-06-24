@@ -64,7 +64,9 @@
 
     .section.news
       h1.title.is-4 News
-      // li Dataset will be released in early June, 2018.
+      li The train-val images and annotations are now available in
+        router-link(to="dataset/download")  "Dataset Download" tab
+        | .
       li We are carefully performing the final check of our dataset and will release it in mid June of 2018.
       li Check out our benchmark challenge
         router-link(to='challenge/challenge2018')  "1st Large-scale Video Object Segmentation Challenge"
@@ -158,28 +160,28 @@ export default class HomePage extends Vue {
       link: 'https://sites.google.com/view/ningxu/homepage'
     }, {
       name:'Linjie Yang',
-      affiliation:'Snap Research',
-      im_name:'LinjieYang'
+      affiliation: 'Snap Research',
+      im_name: 'LinjieYang'
     }, {
-      name:'Jianchao Yang',
-      affiliation:'Toutiao AI Lab',
-      im_name:'JianchaoYang'
+      name: 'Jianchao Yang',
+      affiliation: 'Toutiao AI Lab',
+      im_name: 'JianchaoYang'
     }, {
-      name:'Dingcheng Yue',
-      affiliation:'UIUC',
-      im_name:'DingchengYue'
+      name: 'Dingcheng Yue',
+      affiliation: 'UIUC',
+      im_name: 'DingchengYue'
     }, {
-      name:'Yuchen Fan',
-      affiliation:'UIUC',
-      im_name:'YuchenFan'
+      name: 'Yuchen Fan',
+      affiliation: 'UIUC',
+      im_name: 'YuchenFan'
     }, {
-      name:'Yuchen Liang',
-      affiliation:'UIUC',
-      im_name:'YuchenLiang'
+      name: 'Yuchen Liang',
+      affiliation: 'UIUC',
+      im_name: 'YuchenLiang'
     }, {
-      name:'Thomas Huang',
-      affiliation:'UIUC',
-      im_name:'Tom'
+      name: 'Thomas Huang',
+      affiliation: 'UIUC',
+      im_name: 'Tom'
     },
   ]
 

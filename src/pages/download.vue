@@ -21,16 +21,18 @@
 #page-download.page
   section.section
     .container
-      .section
-        h1.title Evaluation Code
-        .container.download
-          a.button.is-primary(disabled)
-            b-icon(icon="github-circle" size="is-small")
-            span Matlab code
-        .container.download
-          a.button.is-primary(disabled)
-            b-icon(icon="github-circle" size="is-small")
-            span Python code
+
+      // .section
+      //   h1.title Evaluation Code
+      //   .container.download
+      //     a.button.is-primary(disabled)
+      //       b-icon(icon="github-circle" size="is-small")
+      //       span Matlab code
+      //   .container.download
+      //     a.button.is-primary(disabled)
+      //       b-icon(icon="github-circle" size="is-small")
+      //       span Python code
+
       .section
         h1.title Evaluation on Validation and Test
         .container.download
@@ -40,7 +42,7 @@
 
       .section
         h1.title Downloads
-        p To reduce data preprocessing time, we have prepared all image frames and annotations in 360p resolution. We provide download links for annotated image frames (6fps) as well as raw image frames (30fps).
+        p To reduce data preprocessing time, we have prepared all image frames and annotations in 720p resolution. We provide download links for annotated image frames (6fps) as well as raw image frames (30fps).
         .container.download(v-for="download in downloads")
           span.left {{ download.text }}
           b-dropdown(:hoverable="download.annotated_frames" :disabled="!download.annotated_frames")

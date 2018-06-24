@@ -25,8 +25,7 @@ export default new Router({
     }, {
       path: '/dataset/download',
       name: 'download',
-      // component: DownloadPage,
-      component: DummyPage,
+      component: DownloadPage,
     }, {
       path: '/dataset/explore',
       name: 'explore',

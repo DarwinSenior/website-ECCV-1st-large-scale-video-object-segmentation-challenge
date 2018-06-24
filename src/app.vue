@@ -85,7 +85,7 @@ export default class App extends Vue {
       text: 'Dataset', to: 'dataset',
       submenu: [{
         text: 'Download', 'to': 'download',
-        disabled: true,
+        disabled: false,
       }, {
         text: 'Explore', 'to': 'explore',
         disabled: true,
