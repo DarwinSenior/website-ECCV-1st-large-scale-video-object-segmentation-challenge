@@ -66,7 +66,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class DownloadPage extends Vue {
   downloads = [{
-    text: 'Train Images and Annotations',
+    text: 'Training Images and Annotations',
     annotated_frames: [{
       link: 'https://drive.google.com/drive/folders/1bI5J1H3mxsIGo7Kp-pPZU8i6rnykOw7f?usp=sharing',
       text: 'Google Drive',
@@ -81,9 +81,9 @@ export default class DownloadPage extends Vue {
       icon: 'onedrive',
     }]
   }, {
-    text: 'Validation - Images and First Frame Annotations',
+    text: 'Validation Images and First Frame Annotations',
   }, {
-    text: 'Test - Images and First Frame Annotations'
+    text: 'Test Images and First Frame Annotations'
   }]
 }
 </script>
