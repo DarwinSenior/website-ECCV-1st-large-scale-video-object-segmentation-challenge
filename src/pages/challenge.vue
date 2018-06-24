@@ -35,7 +35,9 @@
     .section
       h1.title.is-4 Announcement
       li The top three teams will be awarded with prizes.
-      li The training dataset will be released soon.
+      li The training dataset is available. Please checkout
+        router-link(to="/dataset/download")  download
+        |  page.
       li The test server will be available soon.
 
     .section

@@ -14,23 +14,23 @@
       h1.title.is-4 Dataset
       p Our dataset contains three subsets.
       li Training: 3471 video sequences with densely-sampled multi-object annotations. Each object is annotated with a category name, there is 65 categories in traning set.
-      li Validation: 474 video sequences with the first-frame annotations. It includes objects from the 65 training categories, and 26 unseen categories in training.  
+      li Validation: 474 video sequences with the first-frame annotations. It includes objects from the 65 training categories, and 26 unseen categories in training.
       li Test: Another 508 sequences with the first-frame annotations. It includes objects from the 65 training categories, and 29 unseen categories in training.
       li RGB images and annotations for the labeled frames will be provided. We will also provide a download link for all image frames. Evaluation of validation and test sets will be done by uploading results to our evaluation server. Category information for validation and test sets will not be released.
-      li To download the dataset, checkout 
-        a(href='/dataset/download') download 
-        | page.
+      li To download the dataset, checkout
+        router-link(to='/dataset/download')  download
+        |  page.
     .section
       h1.title.is-4 Evaluation Metric
-      p Similar to a previous video object segmentation challenge 
-        a(href='http://davischallenge.org/') DAVIS
+      p Similar to a previous video object segmentation challenge
+        a(href='http://davischallenge.org/')  DAVIS
         |, we will be using Region Jaccard (J) and Boundary F measure (F) as evaluation metric.  The overall ranking measures will be computed in the following way: 1. compute J and F for both seen and unseen categories, averaged over all corresponding objects. 2. the final score is the average of the four scores: J for seen categories, F for seen categories, J for unseen categories, and F for unseen categories. Note that we have some of the objects start appearing from the middle of videos, we will only compute the metrics from the first occurence of these objects to the end of the video.
     .section
       h1.title.is-4 Result Submission
-      p Submission of evaluation results will be made through 
-        a(href='https://competitions.codalab.org') CodaLab
+      p Submission of evaluation results will be made through
+        a(href='https://competitions.codalab.org')  CodaLab
         |.
-    
+
     .section
       h1.title.is-4 Paper Submission
       li We will be inviting top-ranking teams to submit short technical papers. The template of the paper is the same as ECCV, but length will be limited to 10 pages including references.
@@ -39,7 +39,8 @@
 
     .section
       h1.title.is-4 FAQ
-      p 1. Can external datasets be used to train the competition models? 
+      p.has-text-weight-bold
+        | 1. Can external datasets be used to train the competition models?
       p Yes, external datasets can be used. If external datasets are used, it needs to be clarified in the technical papers.
 
 </template>

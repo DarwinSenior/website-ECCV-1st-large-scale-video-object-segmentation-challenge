@@ -97,7 +97,7 @@ export default class App extends Vue {
         text: 'ECCV Workshop', to: 'challenge2018',
       },{
         text: 'Guidelines', to: 'guidelines',
-        disabled: true,
+        disabled: false,
       },{
         text: 'Workshop Program', to: 'workshop',
       }, {
