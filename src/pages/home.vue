@@ -64,7 +64,7 @@
 
     .section.news
       h1.title.is-4 News
-      li The train-val images and annotations are now available in
+      li The training images and annotations are now available in
         router-link(to="/dataset/download")  download
         |  page. The competition guidelines can be found in
         router-link(to="/challenge/guidelines")  guidelines
