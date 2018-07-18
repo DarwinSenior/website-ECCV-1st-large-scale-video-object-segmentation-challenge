@@ -34,15 +34,21 @@
       //       span Python code
 
       .section
-        h1.title Evaluation on Validation and Test
+        h1.title Evaluation
         .container.download
-          a.button.is-info(disabled)
+          a.button.is-info(href="https://competitions.codalab.org/competitions/19544#participate-submit_results")
             b-icon(icon="cube-outline" size="is-small")
-            span Validation and Test
+            span codalab link
 
       .section
         h1.title Downloads
-        p To reduce data preprocessing time, we have prepared all image frames and annotations in 720p resolution. We provide download links for annotated image frames (6fps) as well as raw image frames (30fps).
+        p Currently, download links are available through #
+          a(href="https://competitions.codalab.org/competitions/19544#participate") codalab
+          |  competition for challenge2018. For more details, please see the
+          router-link(to="/challenge/challenge2018")  the 1st large-scale video object segmentation challenge
+          |  and its
+          router-link(to="/challenge/guidelines")  guidelines
+          | .
         .container.download(v-for="download in downloads")
           span.left {{ download.text }}
           b-dropdown(:hoverable="download.annotated_frames" :disabled="!download.annotated_frames")
@@ -69,19 +75,6 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 export default class DownloadPage extends Vue {
   downloads = [{
     text: 'Training Images and Annotations',
-    annotated_frames: [{
-      link: 'https://drive.google.com/drive/folders/1bI5J1H3mxsIGo7Kp-pPZU8i6rnykOw7f?usp=sharing',
-      text: 'Google Drive',
-      icon: 'google-drive',
-    }, {
-      link: 'https://pan.baidu.com/s/14cEAXYqSm125TuUjLCv53Q',
-      text: 'Baidu Pan',
-      icon: 'cloud-download',
-    }, {
-      link: 'https://uillinoisedu-my.sharepoint.com/:f:/g/personal/yuchenf4_illinois_edu/EmVCEOLTPudFkx8uE8Jn6FIBJSVpt1M4WvdebW91FHvJYA?e=7DbPyT',
-      text: 'One Drive',
-      icon: 'onedrive',
-    }]
   }, {
     text: 'Validation Images and First Frame Annotations',
   }, {

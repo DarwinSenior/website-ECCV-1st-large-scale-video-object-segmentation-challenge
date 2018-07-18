@@ -1,5 +1,8 @@
 <style lang="scss" scoped>
 #page-home {
+  .figure {
+    margin: auto;
+  }
   video {
     margin: auto;
     display: block;
@@ -36,7 +39,7 @@
 
 <template lang="pug">
 #page-home.page
-  section.section#display-section: .container
+  section.section#display-section: .container.content
     .section
       h1.title.is-4 YouTube-VOS
 
@@ -51,10 +54,11 @@
     //             .info {{info.unit}}
 
     .section
-      p We hope that such a large-scale dataset can
-      li Overcome the data-insufficiency issue for video object segmentation as well as other low and mid-level video understanding tasks, and therefore foster more bold and complicated algorithms such as RNN, Reinforcement Learning etc.
-      li Provide diverse training samples to help learn specific object characteristics in videos such as spatial-temporal coherence.
-      li Provide more comprehensive evaluation results than existing datasets (For example, larger testing scale and better evaluation metrics).
+      p We hope that such a large-scale dataset can:
+      ul
+        li Overcome the data-insufficiency issue for video object segmentation as well as other low and mid-level video understanding tasks, and therefore foster more bold and complicated algorithms such as RNN, Reinforcement Learning etc.
+        li Provide diverse training samples to help learn specific object characteristics in videos such as spatial-temporal coherence.
+        li Provide more comprehensive evaluation results than existing datasets (For example, larger testing scale and better evaluation metrics).
 
       //p Video object segmentation, which targets at segmenting a particular object instance throughout the entire video sequence given only the object mask on the first frame, has attracted much attention from the vision community recently. However, we notice that the current datasets for video object segmentation have several limitations, i.e. limited number of videos and no separation between training and evaluation categories. To facilitate future research on this topic, we collected a large scale video segmentation datasets called Youtube-VOS (YouTube Video Object Segmentation). Our dataset contains 3,252 YouTube video clips featuring 78 categories covering common animals, vehicles, accessories and human activities. Each video clip is about 3 to 6 seconds long and often contains multiple objects, which are manually segmented by professional annotators. In addition, our test set contains 10 unique categories that do not exist in the training set and are used to evaluate the generalization ability of existing approaches on unseen categories.
       //p To facilitate researches in video object segmentation in a large scale base, we will organize a workshop competition named "The 1st Large-scale Video Object Segmentation Challenge" at ECCV 2018. The competition will be based on the Youtube-VOS dataset. For details, please check out
@@ -64,15 +68,16 @@
 
     .section.news
       h1.title.is-4 News
-      li The training images and annotations are now available in
-        router-link(to="/dataset/download")  download
-        |  page. The competition guidelines can be found in
-        router-link(to="/challenge/guidelines")  guidelines
-        |  page.
-      li We are carefully performing the final check of our dataset and will release it in mid June of 2018.
-      li Check out our benchmark challenge
-        router-link(to='/challenge/challenge2018')  "1st Large-scale Video Object Segmentation Challenge"
-        |  which will be held in ECCV 2018!
+      ul
+        li The training images and annotations are now available in
+          router-link(to="/dataset/download")  download
+          |  page. The competition guidelines can be found in
+          router-link(to="/challenge/guidelines")  guidelines
+          |  page.
+        li We are carefully performing the final check of our dataset and will release it in mid June of 2018.
+        li Check out our benchmark challenge
+          router-link(to='/challenge/challenge2018')  "1st Large-scale Video Object Segmentation Challenge"
+          |  which will be held in ECCV 2018!
     //.section
     //  h1.title Data Statistics
     //  p put a historgram of number of different categories, a histogram of video length
@@ -102,11 +107,10 @@
         div(v-for="organizer in organizers")
           figure.image.is-128x128
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
-          p
-          p.is-size-7-desktop.has-text-centered
+          p.has-text-centered
             a(:href="organizer.link") {{organizer.name}}
-          p.is-size-7-desktop.has-text-centered
-            | {{organizer.affiliation}}
+            br
+            span {{organizer.affiliation}}
 
     .section
       hi.title.is-4 Citation
@@ -114,9 +118,11 @@
 
     .section
       h1.title.is-4 Contact
-      p For dataset related questions, please feel free to contact
+      p For <router-link to="/dataset/download">dataset</router-link> related questions, please feel free to contact
         a(href='mailto:ytvos@gmail.com')  ytbvos@gmail.com
         |.
+      p For <router-link to="/challenge/challenge2018">challenge</router-link> related questions, you can
+        | also use <a href="https://competitions.codalab.org/forums/16267/">codalab forums</a>.
 
     .section
       h1.title.is-4 License

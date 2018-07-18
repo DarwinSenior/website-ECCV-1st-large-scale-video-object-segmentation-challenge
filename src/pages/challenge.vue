@@ -1,11 +1,14 @@
 <style lang="scss" scoped>
 #page-dataset {
+  .figure {
+    margin: auto;
+  }
 }
 </style>
 
 <template lang="pug">
 #page-dataset
-  section.section#display-section: .container
+  section.section#display-section: .container.content
     .section
       h1.title.has-text-centered
         | The 1st Large-scale Video Object Segmentation Challenge
@@ -34,19 +37,21 @@
 
     .section
       h1.title.is-4 Announcement
-      li The top three teams will be awarded with prizes.
-      li The training dataset is available. Please checkout
-        router-link(to="/dataset/download")  download
-        |  page.
-      li The test server will be available soon.
+      ul
+        li The top three teams will be awarded with prizes.
+        li The training dataset is available. Please checkout
+          router-link(to="/dataset/download")  download
+          |  page.
+        li The test server will be available soon.
 
     .section
       h1.title.is-4 Tentative Timetable
-      li <strong>Sep 14th</strong>: The workshop begins.
-      li <strong>Aug 27th</strong>: The final competition results will be announced and high-performance teams will be invited.
-      li <strong>Aug 10th-25th</strong>: Release the test dataset and open the submission of the test results.
-      li <strong>Jul 1st</strong>: Setup the submission server on CodaLab and open the submission of the validation results.
-      li <strong>Jun 15th</strong>: Release the training and validation dataset.
+      ul
+        li <strong>Sep 14th</strong>: The workshop begins.
+        li <strong>Aug 27th</strong>: The final competition results will be announced and high-performance teams will be invited.
+        li <strong>Aug 10th-25th</strong>: Release the test dataset and open the submission of the test results.
+        li <strong>Jul 18th</strong>: Setup the submission server on CodaLab and open the submission of the validation results.
+        li <strong>Jun 18th</strong>: Release the training and validation dataset.
 
     // .section
     //   h1.title.is-4 Citation
@@ -57,13 +62,12 @@
       h1.title.is-4 Organizers
       .columns.flex-wrap
         div(v-for="organizer in organizers")
-          figure.image.is-128x128
+          figure.image.is-128x128.has-text-centered
             img.is-rounded(:src="'/static/organizers/'+organizer.im_name+'.jpg'")
-          p
-          p.is-size-7-desktop.has-text-centered
+          p.is-size-6.has-text-centered
             a(:href='organizer.link') {{organizer.name}}
-          p.is-size-7-desktop.has-text-centered
-            | {{organizer.affiliation}}
+            br
+            span {{organizer.affiliation}}
 
     .section
       h1.title.is-4 Contact
