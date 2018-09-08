@@ -32,7 +32,17 @@
             p {{speaker.bio}}
     .section
       h1.title.is-4 Workshop schedule (Sep 14th afternoon)
-      p To be scheduled.
+      li <strong>12:30-1:30</strong>: Poster Session (Shared with the workshop "The Third International Workshop on Video Segmentation").
+      li <strong>1:30-2:00</strong>: Welcome and introduction.
+      li <strong>2:00-2:40</strong>: Invited talk.
+      li <strong>2:40-2:55</strong>: 4th place team presentation.
+      li <strong>2:55-3:10</strong>: Break.
+      li <strong>3:10-3:50</strong>: Invited talk.
+      li <strong>3:50-4:05</strong>: 3rd place team presentation.
+      li <strong>4:05-4:20</strong>: 2nd place team presentation.
+      li <strong>4:20-4:35</strong>: 1st place team presentation.
+      li <strong>4:35-5:00</strong>: Closing remarks and awards.
+      li <strong>5:00-6:00</strong>: Poster Session (Shared with the workshop "The Third International Workshop on Video Segmentation").
     // .section
     //   hi.title.is-4 Citation
     //   p Will be available soon.
