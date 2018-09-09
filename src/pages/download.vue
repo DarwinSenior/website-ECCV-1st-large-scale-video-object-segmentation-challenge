@@ -49,7 +49,7 @@
           |  and its
           router-link(to="/challenge/guidelines")  guidelines
           | .
-        .container.download(v-for="download in downloads")
+        .container.download(v-for="download in downloads" v-if="false")
           span.left {{ download.text }}
           b-dropdown(:hoverable="download.annotated_frames" :disabled="!download.annotated_frames")
             a.button.is-warning(slot="trigger")

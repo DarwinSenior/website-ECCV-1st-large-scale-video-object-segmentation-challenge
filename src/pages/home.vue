@@ -45,13 +45,13 @@
 
       p YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. Some statistics of the dataset are shown below. More details can be found in the dataset report (will be available soon).
 
-    // .section
-    //   .columns
-    //     .column(v-for="info in infos")
-    //         .infos
-    //           b-tooltip(:label="expandinfo(info)" type="is-light")
-    //             .num  {{info.number}}
-    //             .info {{info.unit}}
+    .section
+      .columns
+        .column(v-for="info in infos")
+            .infos
+              b-tooltip(:label="expandinfo(info)" type="is-light")
+                .num  {{info.number}}
+                .info {{info.unit}}
 
     .section
       p We hope that such a large-scale dataset can:
@@ -69,6 +69,8 @@
     .section.news
       h1.title.is-4 News
       ul
+        li We have now released all the frames for the dataset
+        li The competition is hosted on <a href="https://competitions.codalab.org/competitions/19544">codelab</a>. Please register an account on codalab to participate.
         li The training images and annotations are now available in
           router-link(to="/dataset/download")  download
           |  page. The competition guidelines can be found in
@@ -148,13 +150,12 @@ export default class HomePage extends Vue {
   samples = ['sample1', 'sample2', 'sample3', 'sample4']
   infos = [
     {
-      number: 4000,
+      number: 4453,
       unit: 'Videos',
     },
-    {number: 80, unit: 'Categories'},
-    {number: 6000, unit: 'Unique Objects'},
-    {number: 133886, unit: 'Human Annotations'},
-    {number: 217.21, unit: 'Duration (Minutes)'},
+    {number: 7822, unit: 'Unique Objects'},
+    {number: 191378, unit: 'Human Annotations'},
+    {number: 345, unit: 'Minutes'},
   ]
   expandinfo(info: any) {
     return `The data set consists of ${info['number']} ${info['unit']}`

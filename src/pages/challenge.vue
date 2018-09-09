@@ -38,6 +38,8 @@
     .section
       h1.title.is-4 Announcement
       ul
+        li.has-text-weight-bold The test server is now ready at
+          a(href="https://competitions.codalab.org/competitions/19544")  CodaLab.
         li The top three teams will be awarded with prizes.
         li The training dataset is available. Please checkout
           router-link(to="/dataset/download")  download
