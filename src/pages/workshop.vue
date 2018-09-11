@@ -34,10 +34,10 @@
       h1.title.is-4 Workshop schedule (Sep 14th afternoon)
       li <strong>12:30-1:30</strong>: Poster Session (Shared with the workshop "The Third International Workshop on Video Segmentation").
       li <strong>1:30-2:00</strong>: Welcome and introduction.
-      li <strong>2:00-2:40</strong>: Invited talk.
+      li <strong>2:00-2:40</strong>: Invited talk: Brian Price.
       li <strong>2:40-2:55</strong>: 4th place team presentation.
       li <strong>2:55-3:10</strong>: Break.
-      li <strong>3:10-3:50</strong>: Invited talk.
+      li <strong>3:10-3:50</strong>: Invited talk: Jason Corso.
       li <strong>3:50-4:05</strong>: 3rd place team presentation.
       li <strong>4:05-4:20</strong>: 2nd place team presentation.
       li <strong>4:20-4:35</strong>: 1st place team presentation.
@@ -75,14 +75,16 @@ export default class WorkshopPage extends Vue {
     Associate Editor of PAMI, and a member of the AAAI, IEEE, ACM.`,
     photo: 'JasonCorso',
   }, {
-    name: 'Chenliang Xu',
-    bio: `Dr. Chenliang Xu is currently an Assistant Professor in the Department of Computer Science
-    at the University of Rochester. He received his Ph.D. in Computer Science and Engineering at
-    the University of Michigan in 2016. His research thrusts include computer vision and its relations
-    to natural language, robotics, and data science. He primarily focuses on problems in video
-    understanding such as video segmentation, activity recognition, and multimodal vision-and-x
-    modeling. He also has broader interests in machine learning and deep learning.`,
-    photo: 'ChenliangXu',
+    name: 'Brian Price',
+    bio: `Brian is a researcher in the Adobe Research Labs working in computer vision. He received his
+    PhD degree in computer science from Brigham Young University in 2010, and his adviser was Dr. Bryan
+    Morse. His PhD research focused on interactive image segmentation and matting in images and videos.
+    Before that, he received his masters degree from the same institution under the guidance of Dr. 
+    William Barrett.
+    Brian joined Adobe in 2010 after completing his graduate work. His research interests include image
+    and video segmentation and matting, interactive vision methods, stereo, and other computer vision
+    fields, and well as broad interest in computer graphics and machine learning.`,
+    photo: 'BrianPrice',
   }]
 }
 </script>
