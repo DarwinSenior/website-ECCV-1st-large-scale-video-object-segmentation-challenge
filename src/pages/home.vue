@@ -43,7 +43,7 @@
     .section
       h1.title.is-4 YouTube-VOS
 
-      p YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. Some statistics of the dataset are shown below. More details can be found in the dataset report (will be available soon).
+      p YouTube-VOS is the first large-scale dataset for video object segmentation. Our dataset contains 4000+ YouTube videos, 70+ common objects and densely-sampled high-quality pixel-level annotations. Some statistics of the dataset are shown below. <a href="https://arxiv.org/abs/1809.03327">More details can be found in the dataset report.</a>
 
     .section
       .columns
