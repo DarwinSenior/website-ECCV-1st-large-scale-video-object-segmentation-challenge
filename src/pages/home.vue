@@ -116,12 +116,12 @@
 
     .section
       hi.title.is-4 Citation
-      p <pre><code>@article{xu2018youtube,
-        title={YouTube-VOS: A Large-Scale Video Object Segmentation Benchmark},
-        author={Xu, Ning and Yang, Linjie and Fan, Yuchen and Yue, Dingcheng and Liang, Yuchen and Yang, Jianchao and Huang, Thomas},
-        journal={arXiv preprint arXiv:1809.03327},
-        year={2018}
-        }</code></pre>
+      | <pre><code>@article{xu2018youtube,
+      | title={YouTube-VOS: A Large-Scale Video Object Segmentation Benchmark},
+      | author={Xu, Ning and Yang, Linjie and Fan, Yuchen and Yue, Dingcheng and Liang, Yuchen and Yang, Jianchao and Huang, Thomas},
+      | journal={arXiv preprint arXiv:1809.03327},
+      | year={2018}
+      | }</code></pre>
 
     .section
       h1.title.is-4 Contact
