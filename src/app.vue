@@ -102,7 +102,7 @@ export default class App extends Vue {
         text: 'Workshop Program', to: 'workshop',
       }, {
         text: 'Leaderboard', to: 'leaderboard',
-        disabled: true,
+        disabled: false,
       }, ],
     }
   ]

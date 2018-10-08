@@ -9,7 +9,7 @@ import WorkshopPage from './workshop.vue'
 import GuidelinesPage from './guidelines.vue'
 import DummyPage from './dummy.vue'
 import NotFoundPage from './notfound.vue'
-
+import LeaderboardPage from './leaderboard.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -46,7 +46,7 @@ export default new Router({
     }, {
       path: '/challenge/leaderboard',
       name: 'leaderboard',
-      component: DummyPage,
+      component: LeaderboardPage,
     }, {
       path: '/404',
       component: NotFoundPage,
