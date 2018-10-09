@@ -115,7 +115,7 @@
             span {{organizer.affiliation}}
 
     .section
-      hi.title.is-4 Citation
+      h1.title.is-4 Citation
       | <pre><code>@article{xu2018youtube,
       | title={YouTube-VOS: A Large-Scale Video Object Segmentation Benchmark},
       | author={Xu, Ning and Yang, Linjie and Fan, Yuchen and Yue, Dingcheng and Liang, Yuchen and Yang, Jianchao and Huang, Thomas},
