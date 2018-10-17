@@ -12,39 +12,75 @@
       table#name-perf-rank
         tr
           th Team Name
-          th Performance
-          th Ranking
+          th Overall
+          th J_seen
+          th J_unseen
+          th F_seen
+          th F_unseen
+          th Rank
         tr
-          td <strong>Jono</strong>
-          td
-          td <strong>1st</strong>
+          td #[strong Jono]
+          td #[strong 0.722 (1)]
+          td #[strong 0.737 (1)]
+          td #[strong 0.648 (2)]
+          td #[strong 0.778 (1)]
+          td #[strong 0.725 (2)]
+          td #[strong 1st]
         tr
-          td <strong>speeding_zZ</strong>
-          td
-          td <strong>2nd</strong>
+          td #[strong speeding_zZ]
+          td #[strong 0.720 (2)]
+          td #[strong 0.725 (3)]
+          td #[strong 0.663 (1)]
+          td #[strong 0.752 (3)]
+          td #[strong 0.741 (1)]
+          td #[strong 2nd]
         tr
-          td <strong>mikirui</strong>
-          td
-          td <strong>3rd</strong>
+          td #[strong mikirui]
+          td #[strong 0.699 (3)]
+          td #[strong 0.736 (2)]
+          td #[strong 0.621 (4)]
+          td #[strong 0.755 (2)]
+          td #[strong 0.684 (4)]
+          td #[strong 3rd]
         tr
-          td hi.nineare
-          td
+          td hi.nine
+          td 0.684 (4)
+          td 0.706 (5)
+          td 0.623 (3)
+          td 0.728 (5)
+          td 0.677 (5)
           td 4th
         tr
           td sunpeng
-          td
+          td 0.672 (5)
+          td 0.707 (4)
+          td 0.598 (6)
+          td 0.736 (4)
+          td 0.648 (6)
           td 5th
         tr
           td random_name
-          td
+          td 0.672 (6)
+          td 0.672 (6)
+          td 0.609 (5)
+          td 0.709 (6)
+          td 0.697 (3)
           td 5th
         tr
           td kduarte
-          td
+          td 0.539 (7)
+          td 0.594 (7)
+          td 0.483 (7)
+          td 0.578 (7)
+          td 0.502 (7)
           td 7th
         tr
           td SnowFlower
-          td
+          td 0.448 (8)
+          td 0.513 (8)
+          td 0.367 (8)
+          td 0.494 (8)
+          td 0.419 (8)
           td 8th
     .section
       h1.title.is-4 <strong>Team Information</strong>
@@ -56,33 +92,33 @@
           th Organization
           th Technical Report
         tr
-          td <strong>Jono</strong>
+          td Jono
           td Jonathon Luiten, Paul Voigtlaender, Bastian Leibe
           td Computer Vision Group, RWTH Aachen University, Germany
           td <a href="/static/reports/Jono.pdf">Tech Report</a>
         tr
-          td <strong>speeding_zZ</strong>
+          td speeding_zZ
           td Zilong Huang*, Qiang Zhou*, Lichao Huang, Han Shen, Yongchao Gong, Chang Huang, Wenyu Liu, Xinggang Wang
           td Huazhong University of Science and Technology, Horizon Robotics
           td N/A
         tr
-          td <strong>mikirui</strong>
+          td mikirui
           td Huaijia Lin*, Ruizheng Wu*, Xiaogang Xu, Xiaojuan Qi, Jiaya Jia
           td The Chinese University of Hong Kong & Tencent YouTu X-Lab
           td <a href="/static/reports/PMSNet.pdf">Slides</a>
         tr
-          td hi.nineare
-          td N/A
+          td hi.nine
+          td Wonjoon Goo
           td University of Texas at Austin & Preferred Networks
           td N/A
         tr
           td sunpeng
-          td N/A
+          td Peng Sun, Mingyu Ding, Guangliang Cheng,  Xi Li
           td Zhejiang University & Renmin University of China & Institute of Remote Sensing and Digital Earth (RADI) & Chinese Academy of Sciences (CAS)
           td N/A
         tr
           td random_name
-          td N/A
+          td Cunbin Gui
           td ByteDance AI Lab
           td N/A
         tr
