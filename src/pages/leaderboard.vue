@@ -118,7 +118,7 @@
           td N/A
         tr
           td random_name
-          td Cunbin Gui
+          td Cunbin Gui, Qi Chen, Qili Deng
           td ByteDance AI Lab
           td N/A
         tr
